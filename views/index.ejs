@@ -25,17 +25,20 @@
             </thead>
         
             <tbody>
-                <tr>
-                    <td>
-                        <a href="https://google.com">https://google.com</a> 
-                    </td>
-                    <td>
-                        <a href="/1245"> 1245</a>
-                    </td>
-                    <td>
-                        10
-                    </td>
-                </tr> 
+                <% shortUrls.forEach(shortUrl => { %>
+                    <tr>
+                        <td>
+                            <a href="<%= shortUrl.full %>"><%= shortUrl.full %></a> 
+                        </td>
+                        <td>
+                            <a href="<%= shortUrl.short%>">localhost:<%= process.env.PORT || 8000 %>/<%= shortUrl.short%></a>
+                        </td>
+                        <td>
+                            <%= shortUrl.clicks %>
+                        </td>
+                    </tr> 
+                <% }) %>
+
             </tbody>
 
         </table>
