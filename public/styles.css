@@ -20,3 +20,7 @@ h1{
       background-color: crimson;
       margin-top: 10px;
   }
+  .btn-refresh{
+      margin: auto;
+      display: block;
+  }
